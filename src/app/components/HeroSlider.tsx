@@ -7,13 +7,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import heroImage from '@/imports/image.png';
 
 const slides = [
-  {
-    image: heroImage,
-    isImport: true,
-    headline: 'মানবতার সেবায় এক অনন্য অঙ্গীকার',
-    subheadline: 'Health, Happiness & Dignity for All',
-    description: 'আর্তমানবতার কল্যাণে এবং একটি সুন্দর ভবিষ্যৎ বিনির্মাণে আমরা কাজ করছি অবিরত।',
-  },
+  
   {
     image: 'https://images.unsplash.com/photo-1731010228061-c50a53176311?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxodW1hbml0YXJpYW4lMjBhaWQlMjBCYW5nbGFkZXNoJTIwd29tYW4lMjBmYXJtaW5nfGVufDF8fHx8MTc4MTYxMTYxMHww&ixlib=rb-4.1.0&q=80&w=1080',
     isImport: false,

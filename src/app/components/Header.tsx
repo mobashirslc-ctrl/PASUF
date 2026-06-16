@@ -16,7 +16,7 @@ export function Header() {
               <span className="font-semibold text-white">P</span>
             </div>
             <span className="hidden font-semibold text-foreground sm:inline-block">
-              PASUF
+              প্রিন্সিপাল আল্লামা ছফির উদ্দিন ফাউন্ডেশন
             </span>
           </Link>
 
