@@ -1,6 +1,7 @@
-import { createBrowserRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
+import { DonatePage } from './pages/DonatePage'; 
 import { About } from './pages/About';
 import { Initiatives } from './pages/Initiatives';
 import { Impact } from './pages/Impact';
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       { index: true, Component: Home },
+      { path: 'donate', Component: DonatePage },
       { path: 'about', Component: About },
       { path: 'initiatives', Component: Initiatives },
       { path: 'impact', Component: Impact },
