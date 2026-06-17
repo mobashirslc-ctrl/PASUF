@@ -1,8 +1,10 @@
-import { useNavigate } from 'react-router-dom';
 import { funds } from '../data/funds';
 
 export const DonationForm = () => {
-  const navigate = useNavigate();
+  // navigate এর পরিবর্তে সরাসরি রিডাইরেক্ট ব্যবহার করুন
+  const handleDonate = () => {
+    window.location.href = '/donate';
+  };
 
   return (
     <div className="bg-[#E59F34] p-6 rounded-lg text-white shadow-lg mx-4 md:mx-20 mt-8 relative z-20">
@@ -14,7 +16,7 @@ export const DonationForm = () => {
         <input type="text" placeholder="মোবাইল/ইমেইল" className="p-3 rounded text-black" />
         <input type="number" placeholder="পরিমাণ" className="p-3 rounded text-black" />
         <button 
-          onClick={() => navigate('/donate')}
+          onClick={handleDonate}
           className="bg-[#0F6B4A] p-3 rounded font-bold hover:bg-green-900 md:col-span-3">
           দান করুন
         </button>
