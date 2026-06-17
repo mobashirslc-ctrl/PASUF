@@ -3,7 +3,9 @@ import { funds } from '../data/funds';
 
 export const DonationForm = () => {
   return (
-    <div className="bg-[#E59F34] p-6 rounded-lg text-white shadow-lg mx-4 md:mx-20 -mt-16 relative z-20">
+    // '-mt-16' এর জায়গায় 'mt-4' বা প্রয়োজন অনুযায়ী স্পেস দিন
+    // 'relative z-20' নিশ্চিত করুন যেন এটি অন্য এলিমেন্টের ওপরে থাকে
+    <div className="bg-[#E59F34] p-6 rounded-lg text-white shadow-lg mx-4 md:mx-20 mt-4 md:mt-8 relative z-50">
       <h2 className="text-2xl font-bold mb-4 text-center">আপনার অনুদান প্রদান করুন</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <select id="fund-select" className="p-3 rounded text-black w-full">

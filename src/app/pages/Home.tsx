@@ -14,7 +14,7 @@ export function Home() {
       <NoticeBar />
 
       {/* ৩. অনুদান ফর্ম (স্লাইডার ও নোটিশের ঠিক নিচেই থাকবে) */}
-      <div className="relative z-30">
+      <div className="relative z-30 mb-8 mt-4">
         <DonationForm />
       </div>
 
