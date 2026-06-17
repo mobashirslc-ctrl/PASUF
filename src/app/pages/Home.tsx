@@ -1,6 +1,6 @@
 import { HeroSlider } from '../components/HeroSlider';
 import { NoticeBar } from '../components/NoticeBar';
-import { DonationForm } from '../components/DonationForm'; // ইমপোর্ট করে নিন
+import { DonationForm } from '../components/DonationForm';
 import { IntroSection } from '../components/IntroSection';
 import { ProjectSection } from '../components/ProjectSection';
 
