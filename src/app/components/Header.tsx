@@ -1,63 +1,41 @@
 import { Link } from 'react-router';
 import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-              <span className="font-semibold text-white">P</span>
-            </div>
-            <span className="hidden font-semibold text-foreground sm:inline-block">
-              প্রিন্সিপাল আল্লামা ছফির উদ্দিন ফাউন্ডেশন
-            </span>
+            <img src="/logo.png" alt="Logo" className="h-10 w-10" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center space-x-6 md:flex">
-            <Link to="/" className="transition-colors hover:text-primary">মূলপাতা</Link>
-            <Link to="/about" className="transition-colors hover:text-primary">পরিচিতি</Link>
-            <Link to="/initiatives" className="transition-colors hover:text-primary">সেবামূলক উদ্যোগ</Link>
-            <Link to="/impact" className="transition-colors hover:text-primary">সাফল্যগাথা</Link>
-            <Link to="/contact" className="transition-colors hover:text-primary">আমাদের সাথে যোগাযোগ</Link>
-          </nav>
+          
+<nav className="hidden items-center space-x-4 md:flex text-sm font-medium">
+  <Link to="/">মূলপাতা</Link>
+  <Link to="/about">পরিচিতি</Link>
+  <Link to="/initiatives">সেবামূলক উদ্যোগ</Link>
+  <Link to="/gallery">ফটো অ্যালবাম</Link>
+  <Link to="/volunteer">স্বেচ্ছাসেবী হোন</Link>
+  <Link to="/blog">নিবন্ধ</Link>
+  <Link to="/notice">ঘোষণা</Link>
+  <Link to="/contact">যোগাযোগ</Link>
+</nav>
 
-          {/* CTA Button */}
+          {/* Right Side Buttons */}
           <div className="flex items-center gap-2">
-            <Button asChild className="bg-accent hover:bg-accent/90">
-              <Link to="/contact">সহায়তা প্রদান</Link>
-            </Button>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <div className="flex items-center border rounded-md overflow-hidden text-xs">
+              <span className="px-2 bg-green-100">বাং</span>
+              <span className="px-2">EN</span>
+            </div>
+            <User className="h-8 w-8 p-1.5 border rounded-md cursor-pointer" />
+            <Button className="bg-[#0F6B4A] hover:bg-[#0d5a3f]">দান করুন</Button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="border-t py-4 md:hidden">
-            <div className="flex flex-col space-y-3">
-              <Link to="/" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>মূলপাতা</Link>
-              <Link to="/about" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>পরিচিতি</Link>
-              <Link to="/initiatives" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>সেবামূলক উদ্যোগ</Link>
-              <Link to="/impact" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>সাফল্যগাথা</Link>
-              <Link to="/contact" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>আমাদের সাথে যোগাযোগ</Link>
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   );
