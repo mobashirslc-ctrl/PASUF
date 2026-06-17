@@ -6,20 +6,17 @@ import { ProjectSection } from '../components/ProjectSection';
 export function Home() {
   return (
     <div className="flex flex-col">
-      {/* ১. নোটিশ বার */}
-      <NoticeBar />
-
-      {/* ২. হিরো স্লাইডার */}
+      {/* ১. হিরো স্লাইডার (সবার উপরে) */}
       <HeroSlider />
+
+      {/* ২. নোটিশ বার (স্লাইডারের নিচে এবং রান্নিং এনিমেশন সহ) */}
+      <NoticeBar />
 
       {/* ৩. পরিচিতি সেকশন */}
       <IntroSection />
 
       {/* ৪. আমাদের কার্যক্রম */}
       <ProjectSection />
-
-      {/* ৫. অন্যান্য সেকশন (আপনি চাইলে Impact বা Success Story গুলোকেও আলাদা কম্পোনেন্টে নিতে পারেন) */}
-      {/* এখানে আপনার আগের ইমপ্যাক্ট বা স্টোরি সেকশনগুলো রাখতে পারেন */}
     </div>
   );
 }

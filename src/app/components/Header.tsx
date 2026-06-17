@@ -22,45 +22,17 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center space-x-6 md:flex">
-            <Link
-              to="/"
-              className="transition-colors hover:text-primary"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="transition-colors hover:text-primary"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/initiatives"
-              className="transition-colors hover:text-primary"
-            >
-              Initiatives
-            </Link>
-            <Link
-              to="/impact"
-              className="transition-colors hover:text-primary"
-            >
-              Impact
-            </Link>
-            <Link
-              to="/contact"
-              className="transition-colors hover:text-primary"
-            >
-              Contact
-            </Link>
+            <Link to="/" className="transition-colors hover:text-primary">মূলপাতা</Link>
+            <Link to="/about" className="transition-colors hover:text-primary">পরিচিতি</Link>
+            <Link to="/initiatives" className="transition-colors hover:text-primary">সেবামূলক উদ্যোগ</Link>
+            <Link to="/impact" className="transition-colors hover:text-primary">সাফল্যগাথা</Link>
+            <Link to="/contact" className="transition-colors hover:text-primary">আমাদের সাথে যোগাযোগ</Link>
           </nav>
 
           {/* CTA Button */}
           <div className="flex items-center gap-2">
-            <Button
-              asChild
-              className="bg-accent hover:bg-accent/90"
-            >
-              <Link to="/contact">Donate Now</Link>
+            <Button asChild className="bg-accent hover:bg-accent/90">
+              <Link to="/contact">সহায়তা প্রদান</Link>
             </Button>
 
             {/* Mobile Menu Button */}
@@ -69,11 +41,7 @@ export function Header() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -82,41 +50,11 @@ export function Header() {
         {mobileMenuOpen && (
           <nav className="border-t py-4 md:hidden">
             <div className="flex flex-col space-y-3">
-              <Link
-                to="/"
-                className="px-2 py-2 transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="px-2 py-2 transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              <Link
-                to="/initiatives"
-                className="px-2 py-2 transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Initiatives
-              </Link>
-              <Link
-                to="/impact"
-                className="px-2 py-2 transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Impact
-              </Link>
-              <Link
-                to="/contact"
-                className="px-2 py-2 transition-colors hover:text-primary"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
+              <Link to="/" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>মূলপাতা</Link>
+              <Link to="/about" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>পরিচিতি</Link>
+              <Link to="/initiatives" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>সেবামূলক উদ্যোগ</Link>
+              <Link to="/impact" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>সাফল্যগাথা</Link>
+              <Link to="/contact" className="px-2 py-2 transition-colors hover:text-primary" onClick={() => setMobileMenuOpen(false)}>আমাদের সাথে যোগাযোগ</Link>
             </div>
           </nav>
         )}
