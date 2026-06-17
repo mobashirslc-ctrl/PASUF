@@ -1,21 +1,27 @@
 import { HeroSlider } from '../components/HeroSlider';
 import { NoticeBar } from '../components/NoticeBar';
+import { DonationForm } from '../components/DonationForm'; // ইমপোর্ট করে নিন
 import { IntroSection } from '../components/IntroSection';
 import { ProjectSection } from '../components/ProjectSection';
 
 export function Home() {
   return (
     <div className="flex flex-col">
-      {/* ১. হিরো স্লাইডার (সবার উপরে) */}
+      {/* ১. হিরো স্লাইডার */}
       <HeroSlider />
 
-      {/* ২. নোটিশ বার (স্লাইডারের নিচে এবং রান্নিং এনিমেশন সহ) */}
+      {/* ২. নোটিশ বার */}
       <NoticeBar />
 
-      {/* ৩. পরিচিতি সেকশন */}
+      {/* ৩. অনুদান ফর্ম (স্লাইডার ও নোটিশের ঠিক নিচেই থাকবে) */}
+      <div className="relative z-30">
+        <DonationForm />
+      </div>
+
+      {/* ৪. পরিচিতি সেকশন */}
       <IntroSection />
 
-      {/* ৪. আমাদের কার্যক্রম */}
+      {/* ৫. আমাদের কার্যক্রম */}
       <ProjectSection />
     </div>
   );
