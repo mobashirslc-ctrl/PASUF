@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
-import { DonatePage } from './pages/DonatePage'; 
+import { DonatePage } from '../DonatePage';
 import { About } from './pages/About';
 import { Initiatives } from './pages/Initiatives';
 import { Impact } from './pages/Impact';
